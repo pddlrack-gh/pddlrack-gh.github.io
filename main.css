@@ -113,6 +113,40 @@ p {
     display: none; /* Everything hidden by default */
 }
 
+/* ==========================================================================
+   5. App Screenshot Carousel (Option 2)
+   ========================================================================== */
+.screenshot-carousel {
+    width: 100%;
+    overflow-x: auto; /* Enables horizontal swipe functionality */
+    padding: 20px 0;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: thin; /* Clean layout for Firefox */
+}
+
+/* Custom scrollbar layout styling for Chrome/Safari/Edge */
+.screenshot-carousel::-webkit-scrollbar {
+    height: 8px;
+}
+.screenshot-carousel::-webkit-scrollbar-thumb {
+    background: var(--secondary-color);
+    border-radius: 4px;
+}
+
+.carousel-track {
+    display: flex;
+    gap: 20px;
+    width: max-content;
+}
+
+.carousel-img {
+    width: 240px; /* Standard mobile scaling view width */
+    height: auto;
+    border-radius: 16px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+    scroll-snap-align: start;
+}
+
 .tab-content.active-content {
     display: block; /* Show only the chosen content section */
 }
