@@ -1,18 +1,52 @@
-<!-- Top Custom Hero Image (No Text Overlay) -->
-<header class="hero-banner">
-</header>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Tabbed Website</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
 
-<!-- Tab Bar Navigation -->
-<nav class="navbar">
-    <ul class="nav-tabs">
-        <li class="nav-item active"><a href="#" class="nav-link">Home</a></li>
-        <li class="nav-item"><a href="#" class="nav-link">Privacy Policy</a></li>
-        <li class="nav-item"><a href="#" class="nav-link">Terms of Service</a></li>
-    </ul>
-</nav>
+    <!-- Top Custom Hero Image (No Text Overlay) -->
+    <header class="hero-banner"></header>
 
-<!-- Main Content Area -->
-<main class="container">
-    <h2>Main Content Heading</h2>
-    <p>Your content goes here...</p>
-</main>
+    <!-- Navigation Tab Bar -->
+    <nav class="navbar">
+        <ul class="nav-tabs">
+            <li class="nav-item active" data-tab="home"><a href="#" class="nav-link">Home</a></li>
+            <li class="nav-item" data-tab="privacy"><a href="#" class="nav-link">Privacy Policy</a></li>
+            <li class="nav-item" data-tab="terms"><a href="#" class="nav-link">Terms of Service</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content Container -->
+    <main class="container">
+        
+        <!-- Home Section (Visible by Default) -->
+        <section id="content-home" class="tab-content active-content">
+            <h2>Welcome Home</h2>
+            <p>This is your website's main landing page content. You can add images, grids, features, or updates right here inside this section wrapper.</p>
+            <p>Clicking the tabs above will seamlessly swap out this view for your policy pages without reloading the window.</p>
+        </section>
+
+        <!-- Privacy Policy Section (Hidden by Default) -->
+        <section id="content-privacy" class="tab-content">
+            <h2>Privacy Policy</h2>
+            <p>Your privacy is important to us. It is our policy to respect your privacy regarding any information we may collect from you across our website.</p>
+            <p>We only ask for personal information when we truly need it to provide a service to you. We collect it by fair and lawful means, with your knowledge and consent.</p>
+        </section>
+
+        <!-- Terms of Service Section (Hidden by Default) -->
+        <section id="content-terms" class="tab-content">
+            <h2>Terms of Service</h2>
+            <p>By accessing our website, you are agreeing to be bound by these terms of service, all applicable laws and regulations, and agree that you are responsible for compliance with any applicable local laws.</p>
+            <p>The materials contained in this website are protected by applicable copyright and trademark law.</p>
+        </section>
+
+    </main>
+
+    <!-- Link to the JavaScript Functionality -->
+    <script src="script.js"></script>
+</body>
+</html>
