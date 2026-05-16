@@ -158,7 +158,7 @@ p {
     display: flex;
     align-items: center;
     gap: 15px; /* Spaces out the icon and the text */
-    background-color: rgba(62, 146, 204, 0.1); /* Subtle tint of your secondary color */
+    background-color: #E4E6E9; 
     border: 1px solid rgba(62, 146, 204, 0.3); /* Defined edge */
     border-radius: 12px; /* High value creates pill-shaped completely rounded corners */
     padding: 12px 24px; /* Vertical and horizontal breathing room */
@@ -174,7 +174,7 @@ p {
 
 .badge-text {
     margin-bottom: 0 !important; /* Overrides any default paragraph bottom margins */
-    color: #E2E8F0;
+    color: #14181B;
     font-size: 0.95rem;
 }
 
