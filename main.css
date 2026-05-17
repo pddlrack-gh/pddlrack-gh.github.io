@@ -157,7 +157,7 @@ p {
 .info-badge {
     display: flex;
     align-items: center;
-    gap: 15px; /* Spaces out the icon and the text */
+    gap: 30px; /* Spaces out the icon and the text */
     background-color: #E4E6E9; 
     border: 1px solid #E4E6E9; /* Defined edge */
     border-radius: 12px; /* High value creates pill-shaped completely rounded corners */
