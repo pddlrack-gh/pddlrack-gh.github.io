@@ -174,7 +174,7 @@ p {
 }
 
 .badge-png-icon {
-    width: 18px;                /* Adjusted down for a clean, sleek appearance */
+    width: 100px;                /* Adjusted down for a clean, sleek appearance */
     height: auto;               /* Retains correct image aspect ratio dimensions */
     display: block;
     transform: translateY(1px); /* Centers the image perfectly with the baseline text height */
