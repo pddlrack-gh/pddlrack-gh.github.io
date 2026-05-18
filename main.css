@@ -297,9 +297,10 @@ p {
     }
 
    .download-badges {
-        flex-direction: column; /* Stacks App Store above Google Play safely */
-        gap: 2px;              /* Tighter gaps for vertical layouts */
-       flex-direction: column;
+        display: flex;
+        flex-direction: row; /* Start as a row */
+        flex-wrap: wrap;     /* THE KEY: Allows them to jump to a new line if they run out of room */
+        gap: 8px;              /* Tighter gaps for vertical layouts */
        align-items: center;
     }
 }
