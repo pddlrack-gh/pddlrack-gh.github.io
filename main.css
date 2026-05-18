@@ -201,9 +201,11 @@ p {
 .features-container {
     display: flex;
     justify-content: center;
-    gap: 30px;
+    flex-direction: row; /* Default layout for desktop */
+    gap: 24px;
     max-width: 1100px;
     margin: 0 auto;
+    padding: 0 20px; /* Gives safe padding on left/right so cards don't touch screen edges */
 }
 
 .feature-card {
@@ -213,6 +215,7 @@ p {
     border-radius: 8px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
     text-align: left; /* Easier to read paragraph blocks when left-aligned */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .feature-card h3 {
@@ -234,5 +237,16 @@ p {
         flex-direction: column;
         text-align: center;
         gap: 8px;
+    }
+   .features-container {
+        flex-direction: column; /* Force cards to stack vertically on mobile */
+        gap: 16px;              /* Controls vertical spacing between cards */
+        padding: 0 16px;        /* Prevents the cards from hitting the left/right screen edges */
+    }
+
+    .feature-card {
+        width: 100%;            /* Forces card to take full responsive width of container */
+        box-sizing: border-box; /* Ensures padding doesn't cause horizontal overflow */
+        padding: 20px;          /* Slightly tighter padding inside cards on mobile */
     }
 }
