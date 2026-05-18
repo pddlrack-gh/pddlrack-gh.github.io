@@ -158,8 +158,8 @@ p {
     display: flex;
     align-items: center;
     gap: 30px; /* Spaces out the icon and the text */
-    background-color: #1AF1F4F8; 
-    border: 5px solid #1AF1F4F8; /* Defined edge */
+    background-color: #F1F4F81A; 
+    border: 5px solid #F1F4F81A; /* Defined edge */
     border-radius: 12px; /* High value creates pill-shaped completely rounded corners */
     padding: 12px 24px; /* Vertical and horizontal breathing room */
    /* Centering the badge container itself on the page */
