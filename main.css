@@ -186,7 +186,7 @@ p {
 .badge-text {
     margin-bottom: 0 !important; /* Overrides any default paragraph bottom margins */
     color: #FFFFFF;
-    font-size: 2.0rem;
+    font-size: 1.75rem;
 }
 
 /* Responsive adjustment for small mobile views so content stacks cleanly if text is long */
