@@ -269,7 +269,7 @@ p {
 
 /* --- SVG Sizing Rules --- */
 .store-badge {
-    height: 300px;  /* Locks both vectors to the exact same rendering height */
+    height: 150px;  /* Locks both vectors to the exact same rendering height */
     width: auto;   /* Allows width to scale proportionally based on the SVG viewBox */
     display: block;
 }
