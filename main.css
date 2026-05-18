@@ -298,7 +298,9 @@ p {
 
    .download-badges {
         flex-direction: column; /* Stacks App Store above Google Play safely */
-        gap: 12px;              /* Tighter gaps for vertical layouts */
+        gap: 2px;              /* Tighter gaps for vertical layouts */
+       flex-direction: column;
+       align-items: center;
     }
 }
 
