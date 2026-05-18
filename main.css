@@ -189,6 +189,44 @@ p {
     font-size: 1.5rem;
 }
 
+
+/* ==========================================================================
+   7. 3-Column Features Section
+   ========================================================================== */
+.features-section {
+    background-color: #f8f9fa; /* Slightly off-white background to separate the section */
+    padding: 60px 20px;
+}
+
+.features-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.feature-card {
+    flex: 1; /* Forces all 3 cards to take up equal width */
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    text-align: left; /* Easier to read paragraph blocks when left-aligned */
+}
+
+.feature-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    color: #3E92CC; /* Blue for feature titles */
+}
+
+.feature-card p {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.5;
+}
+
 /* Responsive adjustment for small mobile views so content stacks cleanly if text is long */
 @media (max-width: 480px) {
     .info-badge {
