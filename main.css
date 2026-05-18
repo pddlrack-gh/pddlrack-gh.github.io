@@ -210,12 +210,13 @@ p {
 
 .feature-card {
     flex: 1; /* Forces all 3 cards to take up equal width */
-    background: #ffffff;
+    background: #13293D;
     padding: 30px;
     border-radius: 8px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
     text-align: left; /* Easier to read paragraph blocks when left-aligned */
     transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border: 5px solid #FFFFFF;
 }
 
 .feature-card h3 {
@@ -226,7 +227,7 @@ p {
 
 .feature-card p {
     font-size: 1rem;
-    color: #666;
+    color: #FFFFFF;
     line-height: 1.5;
 }
 
