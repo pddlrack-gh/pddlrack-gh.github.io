@@ -168,15 +168,19 @@ p {
 .info-badge {
     display: flex;
     align-items: center;
-    gap: 30px; /* Spaces out the icon and the text */
-    background-color: #F1F4F81A; 
-    border: 5px solid #F1F4F81A; /* Defined edge */
-    border-radius: 12px; /* High value creates pill-shaped completely rounded corners */
-    padding: 12px 24px; /* Vertical and horizontal breathing room */
-   /* Centering the badge container itself on the page */
-    width: max-content;         /* Forces the white box to shrink wrap tightly around the text/icon */
-    max-width: 100%;            /* Prevents the badge from spilling off the sides on small screens */
-    margin: 30px auto; /* Creates space above and below the block */
+    gap: 30px;
+    background: linear-gradient(
+        135deg,
+        rgba(62, 146, 204, 0.15) 0%,
+        rgba(19, 41, 61, 0.8) 100%
+    );
+    border: 1px solid rgba(62, 146, 204, 0.4);
+    box-shadow: 0 0 24px rgba(62, 146, 204, 0.15);
+    border-radius: 999px;
+    padding: 12px 28px;
+    width: max-content;
+    max-width: 100%;
+    margin: 30px auto;
 }
 
 .badge-icon {
