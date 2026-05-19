@@ -123,7 +123,7 @@ p {
     overflow-x: auto; /* Enables horizontal swipe functionality */
     scroll-snap-type: x mandatory;
     scrollbar-width: thin; /* Clean layout for Firefox */
-    padding: 20px 25x 100px 50px;
+    padding: 20px 25x 100px 100px;
     /*margin-bottom: 60px;
     border-bottom: 1px solid rgba(62, 146, 204, 0.2);
     padding-bottom: 40px; */
