@@ -133,17 +133,15 @@ p {
     margin-bottom: 60px;
     border-bottom: 1px solid rgba(62, 146, 204, 0.2);
     padding-bottom: 40px;
-       -webkit-mask-image: linear-gradient(
+    -webkit-mask-image: linear-gradient(
         to right,
-        transparent 0%,
-        black 8%,
+        black 0%,
         black 92%,
         transparent 100%
     );
     mask-image: linear-gradient(
         to right,
-        transparent 0%,
-        black 8%,
+        black 0%,
         black 92%,
         transparent 100%
     );
