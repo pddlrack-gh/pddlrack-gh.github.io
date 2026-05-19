@@ -170,6 +170,7 @@ p {
     display: flex;
     gap: 40px;
     width: max-content;
+    padding: 4px 4px
 }
 
 .carousel-img {
