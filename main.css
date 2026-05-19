@@ -121,7 +121,7 @@ p {
 .screenshot-carousel {
     width: 100%;
     overflow-x: auto; /* Enables horizontal swipe functionality */
-    padding: 20px 0;
+    padding: 20px 16;
     scroll-snap-type: x mandatory;
     scrollbar-width: thin; /* Clean layout for Firefox */
     margin-bottom: 60px;
@@ -168,7 +168,7 @@ p {
 
 .carousel-track {
     display: flex;
-    gap: 20px;
+    gap: 40px;
     width: max-content;
 }
 
