@@ -176,7 +176,7 @@ p {
    /* Centering the badge container itself on the page */
     width: max-content;         /* Forces the white box to shrink wrap tightly around the text/icon */
     max-width: 100%;            /* Prevents the badge from spilling off the sides on small screens */
-    margin: 30px 0; /* Creates space above and below the block */
+    margin: 30px auto; /* Creates space above and below the block */
 }
 
 .badge-icon {
@@ -188,7 +188,7 @@ p {
 }
 
 .badge-png-icon {
-    width: 100px;                /* Adjusted down for a clean, sleek appearance */
+    width: 50px;                /* Adjusted down for a clean, sleek appearance */
     height: auto;               /* Retains correct image aspect ratio dimensions */
     display: block;
     transform: translateY(1px); /* Centers the image perfectly with the baseline text height */
@@ -197,7 +197,7 @@ p {
 .badge-text {
     margin-bottom: 0 !important; /* Overrides any default paragraph bottom margins */
     color: #FFFFFF;
-    font-size: 1.0rem;
+    font-size: 1.25rem;
 }
 
 
