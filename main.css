@@ -121,11 +121,11 @@ p {
 .screenshot-carousel {
     width: 100%;
     overflow-x: auto; /* Enables horizontal swipe functionality */
-    padding: 20px 16x 40px, 16px;
+    padding: 20px 25x 100px, 25px;
     scroll-snap-type: x mandatory;
     scrollbar-width: thin; /* Clean layout for Firefox */
-    margin-bottom: 60px;
-    /*border-bottom: 1px solid rgba(62, 146, 204, 0.2);
+    /*margin-bottom: 60px;
+    border-bottom: 1px solid rgba(62, 146, 204, 0.2);
     padding-bottom: 40px; */
 }
 
@@ -170,7 +170,7 @@ p {
     display: flex;
     gap: 40px;
     width: max-content;
-    padding: 20px 20px
+    /* padding: 20px 20px */
 }
 
 .carousel-img {
