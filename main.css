@@ -1,6 +1,8 @@
 /* ==========================================================================
    1. Base Styles & Design Variables
    ========================================================================== */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600;700&display=swap');
+
 :root {
     --bg-color: #13293D;
     --secondary-color: #3E92CC;
@@ -15,7 +17,7 @@
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Outfit', 'Segoe UI', Tahoma, sans-serif;
     background-color: var(--bg-color);
     color: var(--text-color);
     line-height: 1.6;
@@ -210,13 +212,13 @@ p {
 
 .feature-card {
     flex: 1; /* Forces all 3 cards to take up equal width */
-    background: #13293D;
+    background: #1a3550;
     padding: 30px;
     border-radius: 8px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
     text-align: left; /* Easier to read paragraph blocks when left-aligned */
     transition: transform 0.2s ease, box-shadow 0.2s ease;
-    border: 5px solid #FFFFFF;
+    /* border: 5px solid #FFFFFF; */
 }
 
 .feature-card h3 {
@@ -254,6 +256,32 @@ p {
     gap: 12px; /* Perfect breathing room between buttons */
     margin: 5px 0;
 }
+
+/* gradient section divider */
+.section-divider {
+    width: 100%;
+    height: 80px;
+    background: linear-gradient(
+        to bottom,
+        transparent,
+        rgba(62, 146, 204, 0.08),
+        transparent
+    );
+    margin: 20px 0;
+}
+
+/* features section */
+.features-section {
+    background: linear-gradient(
+        135deg,
+        #13293D 0%,
+        #162f47 50%,
+        #13293D 100%
+    );
+    border-top: 1px solid rgba(62, 146, 204, 0.15);
+    border-bottom: 1px solid rgba(62, 146, 204, 0.15);
+}
+
 
 /* --- Interactive Badge Link Wrapper --- */
 .badge-link {
