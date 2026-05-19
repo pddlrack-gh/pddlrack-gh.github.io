@@ -123,7 +123,7 @@ p {
     overflow-x: auto; /* Enables horizontal swipe functionality */
     scroll-snap-type: x mandatory;
     scrollbar-width: thin; /* Clean layout for Firefox */
-    padding: 20px 25px 100px 25px;
+    padding: 20px 25px 75px 25px;
     scroll-padding-left: 50px; /* match your carousel-track padding-left */
     /*margin-bottom: 60px;
     border-bottom: 1px solid rgba(62, 146, 204, 0.2);
