@@ -131,7 +131,7 @@ p {
 
 .carousel-wrapper {
     margin-bottom: 60px;
-    border-bottom: 1px solid rgba(62, 146, 204, 0.2);
+    border-bottom: 2px solid rgba(62, 146, 204, 0.2);
     padding-bottom: 40px;
     -webkit-mask-image: linear-gradient(
         to right,
@@ -168,7 +168,7 @@ p {
     display: flex;
     gap: 40px;
     width: max-content;
-    padding: 50px
+    padding: 50px 50px 50px 65px
 }
 
 .carousel-img {
@@ -234,7 +234,8 @@ p {
    ========================================================================== */
 .features-section {
     background-color: #13293D; /* Slightly off-white background to separate the section */
-    padding: 60px 20px;
+    /* padding: 60px 20px; */
+    padding-top: 60px;
 }
 
 .features-container {
