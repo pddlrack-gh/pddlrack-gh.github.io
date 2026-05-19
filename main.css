@@ -124,7 +124,7 @@ p {
     scroll-snap-type: x mandatory;
     scrollbar-width: thin; /* Clean layout for Firefox */
     padding: 20px 25px 100px 25px;
-    scroll-padding-left: 150px; /* match your carousel-track padding-left */
+    scroll-padding-left: 50px; /* match your carousel-track padding-left */
     /*margin-bottom: 60px;
     border-bottom: 1px solid rgba(62, 146, 204, 0.2);
     padding-bottom: 40px; */
@@ -169,7 +169,7 @@ p {
     display: flex;
     gap: 40px;
     width: max-content;
-    padding: 50px 50px 50px 150px
+    padding: 50px 50px 50px 50px
 }
 
 .carousel-img {
