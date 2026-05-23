@@ -23,6 +23,10 @@ body {
     line-height: 1.6;
 }
 
+a {
+    color: #3E92CC; /* Change this hex code to your preferred color */
+}
+
 /* ==========================================================================
    2. Responsive Hero Image Banner
    ========================================================================== */
