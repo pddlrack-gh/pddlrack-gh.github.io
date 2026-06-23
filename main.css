@@ -488,6 +488,10 @@ p {
     }
 }
 
+.flywheel-scaler {
+        max-width: 360px;
+    }
+
 .flywheel-wrapper {
         flex-direction: column;
         width: 100%;
