@@ -35,7 +35,129 @@
             <br></br>
             <h1>Say goodbye to mismatched open play.</h1>
             <p>Lopsided games aren't fun for anyone. PaddleRack brings transparency to the courts, connecting you with local players who match your skill level using our community-driven rating system.</p>
-            <br></br>
+            <br>
+            <div class="flywheel-section">
+                <svg style="position: absolute; width: 0; height: 0;" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <marker id="sharp-arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+                            <path d="M 0 1.5 L 8 5 L 0 8.5 Z" fill="#3E92CC"/>
+                        </marker>
+                    </defs>
+                </svg>
+
+                <div class="mobile-wheel-container">
+                    <div class="mobile-wheel">
+                        <svg class="mobile-wheel-bg" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M 126,32 A 68 68 0 0 1 168,74" stroke="var(--secondary-color)" stroke-width="3.5" stroke-linecap="round" marker-end="url(#mobile-salient-arrow)"/>
+                            <path d="M 168,126 A 68 68 0 0 1 126,168" stroke="var(--secondary-color)" stroke-width="3.5" stroke-linecap="round" marker-end="url(#mobile-salient-arrow)"/>
+                            <path d="M 74,168 A 68 68 0 0 1 32,126" stroke="var(--secondary-color)" stroke-width="3.5" stroke-linecap="round" marker-end="url(#mobile-salient-arrow)"/>
+                            <path d="M 32,74 A 68 68 0 0 1 74,32" stroke="var(--secondary-color)" stroke-width="3.5" stroke-linecap="round" marker-end="url(#mobile-salient-arrow)"/>
+                            <defs>
+                                <marker id="mobile-salient-arrow" viewBox="0 0 10 10" refX="4" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+                                    <path d="M 0 2 L 7 5 L 0 8 Z" fill="var(--secondary-color)"/>
+                                </marker>
+                            </defs>
+                        </svg>
+                        
+                        <button class="mobile-node active" data-step="1" aria-label="Step 1: Find Players">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                            <span class="node-number">1</span>
+                        </button>
+                        <button class="mobile-node" data-step="2" aria-label="Step 2: Join a Session">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                            <span class="node-number">2</span>
+                        </button>
+                        <button class="mobile-node" data-step="3" aria-label="Step 3: Play Match">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><circle cx="12" cy="12" r="1" fill="currentColor"></circle><circle cx="12" cy="6.5" r="1" fill="currentColor"></circle><circle cx="12" cy="17.5" r="1" fill="currentColor"></circle><circle cx="6.5" cy="12" r="1" fill="currentColor"></circle><circle cx="17.5" cy="12" r="1" fill="currentColor"></circle><circle cx="8.1" cy="8.1" r="1" fill="currentColor"></circle><circle cx="15.9" cy="8.1" r="1" fill="currentColor"></circle><circle cx="8.1" cy="15.9" r="1" fill="currentColor"></circle><circle cx="15.9" cy="15.9" r="1" fill="currentColor"></circle></svg>
+                            <span class="node-number">3</span>
+                        </button>
+                        <button class="mobile-node" data-step="4" aria-label="Step 4: Rate Peers">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                            <span class="node-number">4</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="flywheel-container">
+                    
+                    <div class="flywheel-card step-1 active">
+                        <div class="card-header-row">
+                            <h3>1) Find players</h3>
+                            <svg class="flywheel-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                        </div>
+                        <p>Discover local players matching your skill level via our community-driven rating system.</p>
+                    </div>
+                    
+                    <div class="flywheel-arrow arrow-1">
+                        <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M 10,30 Q 70,30 70,90" stroke="#3E92CC" stroke-width="4" stroke-linecap="round" marker-end="url(#sharp-arrow)"/>
+                        </svg>
+                    </div>
+
+                    <div class="flywheel-card step-2">
+                        <div class="card-header-row">
+                            <h3>2) Join a session</h3>
+                            <svg class="flywheel-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                        </div>
+                        <p>Hop into pre-existing local matches or host your own and invite your top matches.</p>
+                    </div>
+
+                    <div class="flywheel-arrow arrow-2">
+                        <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M 70,10 Q 70,70 10,70" stroke="#3E92CC" stroke-width="4" stroke-linecap="round" marker-end="url(#sharp-arrow)"/>
+                        </svg>
+                    </div>
+
+                    <div class="flywheel-card step-3">
+                        <div class="card-header-row">
+                            <h3>3) Play</h3>
+                            <svg class="flywheel-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><circle cx="12" cy="12" r="1" fill="currentColor"></circle><circle cx="12" cy="6.5" r="1" fill="currentColor"></circle><circle cx="12" cy="17.5" r="1" fill="currentColor"></circle><circle cx="6.5" cy="12" r="1" fill="currentColor"></circle><circle cx="17.5" cy="12" r="1" fill="currentColor"></circle><circle cx="8.1" cy="8.1" r="1" fill="currentColor"></circle><circle cx="15.9" cy="8.1" r="1" fill="currentColor"></circle><circle cx="8.1" cy="15.9" r="1" fill="currentColor"></circle><circle cx="15.9" cy="15.9" r="1" fill="currentColor"></circle></svg>
+                        </div>
+                        <p>Compete in doubles and singles games, or skill-building drilling sessions.</p>
+                    </div>
+
+                    <div class="flywheel-arrow arrow-3">
+                        <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M 90,70 Q 30,70 30,10" stroke="#3E92CC" stroke-width="4" stroke-linecap="round" marker-end="url(#sharp-arrow)"/>
+                        </svg>
+                    </div>
+
+                    <div class="flywheel-card step-4">
+                        <div class="card-header-row">
+                            <h3>4) Rate your peers</h3>
+                            <svg class="flywheel-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                        </div>
+                        <p>Anonymously submit post-match ratings of your peers.</p>
+                    </div>
+
+                    <div class="flywheel-arrow arrow-4">
+                        <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M 30,90 Q 30,30 90,30" stroke="#3E92CC" stroke-width="4" stroke-linecap="round" marker-end="url(#sharp-arrow)"/>
+                        </svg>
+                    </div>
+
+                </div>
+            </div>
+
+            <script>
+                document.querySelectorAll('.mobile-node').forEach(node => {
+                    node.addEventListener('click', () => {
+                        const stepTarget = node.getAttribute('data-step');
+                        
+                        // Synchronize active status across node selectors
+                        document.querySelectorAll('.mobile-node').forEach(n => n.classList.remove('active'));
+                        node.classList.add('active');
+                        
+                        // Toggle active card visibility targets
+                        document.querySelectorAll('.flywheel-card').forEach(card => card.classList.remove('active'));
+                        const targetCard = document.querySelector(`.flywheel-card.step-${stepTarget}`);
+                        if (targetCard) {
+                            targetCard.classList.add('active');
+                        }
+                    });
+                });
+            </script>
+            <br>
             <div class="carousel-wrapper">
                 <div class="screenshot-carousel">
                     <div class="carousel-track">
