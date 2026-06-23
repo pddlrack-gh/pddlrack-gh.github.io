@@ -372,50 +372,6 @@ p {
       margin: 0;
     }
 
-    /* --- MOBILE STYLES (Breakpoint: 768px) --- */
-    @media (max-width: 768px) {
-      .flywheel-container {
-        width: 100%;
-        height: auto;
-        flex-direction: column;
-        gap: 2.5rem; /* Space between stacked cards to allow room for mobile vertical arrows */
-        padding: 1rem 0;
-      }
-
-      /* Hide the desktop curved SVG entirely */
-      .flywheel-svg {
-        display: none;
-      }
-
-      /* Strip away absolute positioning so cards stack naturally */
-      .step-card {
-        position: relative;
-        width: 100%;
-        max-width: 400px; /* Prevents cards from getting awkwardly wide on tablets */
-        top: auto !important;
-        left: auto !important;
-        right: auto !important;
-        bottom: auto !important;
-        transform: none !important;
-      }
-
-      /* Consistent hover animation for mobile instead of directional shifts */
-      .step-card:hover {
-        transform: translateY(-3px) !important;
-      }
-
-      /* Generate a vertical connecting line between cards using CSS pseudo-elements */
-      .step-card:not(:last-child)::after {
-        content: '';
-        position: absolute;
-        bottom: -2.5rem; /* Matches the container gap size */
-        left: 50%;
-        transform: translateX(-50%);
-        width: 0;
-        height: 2.5rem;
-        border-left: 3px dashed #cbd5e1;
-      }
-
 /* --- Footer Layout & Typography --- */
 .app-footer {
     background-color: #13293D; /* Navy background */
@@ -515,6 +471,48 @@ p {
        align-items: center;
     }
 }
+
+.flywheel-container {
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+        gap: 2.5rem; /* Space between stacked cards to allow room for mobile vertical arrows */
+        padding: 1rem 0;
+      }
+
+      /* Hide the desktop curved SVG entirely */
+      .flywheel-svg {
+        display: none;
+      }
+
+      /* Strip away absolute positioning so cards stack naturally */
+      .step-card {
+        position: relative;
+        width: 100%;
+        max-width: 400px; /* Prevents cards from getting awkwardly wide on tablets */
+        top: auto !important;
+        left: auto !important;
+        right: auto !important;
+        bottom: auto !important;
+        transform: none !important;
+      }
+
+      /* Consistent hover animation for mobile instead of directional shifts */
+      .step-card:hover {
+        transform: translateY(-3px) !important;
+      }
+
+      /* Generate a vertical connecting line between cards using CSS pseudo-elements */
+      .step-card:not(:last-child)::after {
+        content: '';
+        position: absolute;
+        bottom: -2.5rem; /* Matches the container gap size */
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0;
+        height: 2.5rem;
+        border-left: 3px dashed #cbd5e1;
+      }
 
 /* --- Legal/Copyright Text --- */
 .copyright {
