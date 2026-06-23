@@ -275,6 +275,187 @@ p {
     line-height: 1.5;
 }
 
+/* ==========================================================================
+   8. Flywheel Layout Matrix & Interactive Flow System
+   ========================================================================== */
+.flywheel-section {
+    width: 100%;
+    margin: 20px auto 60px auto;
+    position: relative;
+}
+
+/* Desktop Matrix presentation grid setup */
+.flywheel-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    align-items: center;
+    justify-items: center;
+    gap: 15px;
+    width: 100%;
+}
+
+/* Coordinate mapping rules */
+.step-1  { grid-row: 1; grid-column: 2; }
+.arrow-1 { grid-row: 1; grid-column: 3; }
+.step-2  { grid-row: 2; grid-column: 3; }
+.arrow-2 { grid-row: 3; grid-column: 3; }
+.step-3  { grid-row: 3; grid-column: 2; }
+.arrow-3 { grid-row: 3; grid-column: 1; }
+.step-4  { grid-row: 2; grid-column: 1; }
+.arrow-4 { grid-row: 1; grid-column: 1; }
+
+/* Structural Card Properties */
+.flywheel-card {
+    background: #1a3550;
+    border: 2px solid var(--secondary-color);
+    padding: 22px;
+    border-radius: 20px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+    text-align: left;
+    width: 100%;
+    max-width: 280px;
+    transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.3s ease;
+    z-index: 2;
+}
+
+.flywheel-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 35px rgba(62, 146, 204, 0.25);
+}
+
+/* Header Spacing: Header Text far left, Icon far right */
+.card-header-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 12px;
+    gap: 12px;
+}
+
+.flywheel-card-icon {
+    width: 26px;
+    height: 26px;
+    color: var(--secondary-color);
+    flex-shrink: 0;
+    display: block;
+}
+
+.flywheel-card h3 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--secondary-color);
+    margin-bottom: 0 !important; /* Overrides default h3 spaces */
+}
+
+.flywheel-card p {
+    font-size: 0.95rem;
+    color: #E2E8F0;
+    line-height: 1.5;
+    margin-bottom: 0 !important;
+}
+
+/* Vector Desktop Arrows Layout */
+.flywheel-arrow {
+    width: 100%;
+    height: 100%;
+    max-width: 120px;
+    max-height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    z-index: 1;
+}
+
+.flywheel-arrow svg {
+    width: 100%;
+    height: 100%;
+}
+
+/* Mobile Screen Presentation Layer Layouts */
+.mobile-wheel-container {
+    display: none; /* Hidden on full viewports */
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.mobile-wheel {
+    position: relative;
+    width: 260px;
+    height: 260px;
+    margin: 0 auto;
+}
+
+.mobile-wheel-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.mobile-node {
+    position: absolute;
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    background: #1a3550;
+    border: 2px solid rgba(62, 146, 204, 0.5);
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding: 14px;
+    transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+    outline: none;
+    z-index: 2;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.mobile-node svg {
+    width: 100%;
+    height: 100%;
+}
+
+.mobile-node .node-number {
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    background: var(--secondary-color);
+    color: #ffffff;
+    font-size: 0.7rem;
+    font-weight: 700;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+}
+
+.mobile-node.active {
+    background: var(--secondary-color);
+    color: #ffffff;
+    border-color: #ffffff;
+    box-shadow: 0 0 20px rgba(62, 146, 204, 0.6);
+}
+
+/* Coordinate maps for mobile circle points */
+.mobile-node[data-step="1"] { top: 0; left: 50%; transform: translateX(-50%); }
+.mobile-node[data-step="2"] { top: 50%; right: 0; transform: translateY(-50%); }
+.mobile-node[data-step="3"] { bottom: 0; left: 50%; transform: translateX(-50%); }
+.mobile-node[data-step="4"] { top: 50%; left: 0; transform: translateY(-50%); }
+
+.mobile-node[data-step="1"].active { transform: translateX(-50%) scale(1.15); }
+.mobile-node[data-step="2"].active { transform: translateY(-50%) scale(1.15); }
+.mobile-node[data-step="3"].active { transform: translateX(-50%) scale(1.15); }
+.mobile-node[data-step="4"].active { transform: translateY(-50%) scale(1.15); }
+
 /* --- Footer Layout & Typography --- */
 .app-footer {
     background-color: #13293D; /* Navy background */
@@ -373,6 +554,30 @@ p {
         gap: 8px;              /* Tighter gaps for vertical layouts */
        align-items: center;
     }
+
+   .flywheel-container {
+        display: block;
+    }
+    .flywheel-arrow {
+        display: none !important;
+    }
+    .mobile-wheel-container {
+        display: block;
+    }
+    .flywheel-card {
+        display: none;
+        max-width: 480px;
+        margin: 0 auto;
+        animation: cardSwitchTransition 0.35s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+    }
+    .flywheel-card.active {
+        display: block;
+    }
+      
+    @keyframes cardSwitchTransition {
+         from { opacity: 0; transform: translateY(12px); }
+         to { opacity: 1; transform: translateY(0); }
+      }
 }
 
 /* --- Legal/Copyright Text --- */
