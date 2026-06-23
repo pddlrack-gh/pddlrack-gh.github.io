@@ -279,8 +279,8 @@ p {
     line-height: 1.5;
 }
 
-/* --- DESKTOP STYLES (Default) --- */
-    .flywheel-container {
+/* Outer wrapper for layout shifting */
+    .flywheel-wrapper {
       position: relative;
       width: 700px;
       height: 700px;
@@ -306,31 +306,28 @@ p {
       stroke-dasharray: 6 4;
     }
 
+    /* --- DESKTOP DISPLAY LAYOUT (Full Cards) --- */
     .step-card {
       position: absolute;
       width: 240px;
       padding: 1.5rem;
-      background: #1a3550;
+      background: var(--bg-card);
       border-radius: 16px;
-      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
-      border: 1px solid #13293D;
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+      border: none;
       z-index: 2;
-      transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease, border-color var(--transition-speed);
+      transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
       cursor: pointer;
       box-sizing: border-box;
     }
 
-    .step-card:hover {
-      box-shadow: 0 20px 25px -5px rgba(15, 92, 122, 0.1), 0 10px 10px -5px rgba(15, 92, 122, 0.04);
-      border-color: #e2e8f0;
-    }
-
-    /* Circular Layout Placement */
+    /* Desktop Positions */
     .step-1 { top: 20px;  left: 50%; transform: translateX(-50%); }
     .step-2 { top: 50%;   right: 20px; transform: translateY(-50%); }
     .step-3 { bottom: 20px; left: 50%; transform: translateX(-50%); }
     .step-4 { top: 50%;   left: 20px;  transform: translateY(-50%); }
 
+    /* Desktop Directional Hovers */
     .step-1:hover { transform: translate(-50%, -5px); }
     .step-2:hover { transform: translate(5px, -50%); }
     .step-3:hover { transform: translate(-50%, 5px); }
@@ -347,21 +344,22 @@ p {
       font-size: 0.85rem;
       text-transform: uppercase;
       font-weight: 700;
-      color: #94a3b8;
+      color: var(--text-muted);
       letter-spacing: 0.05em;
     }
 
     .step-icon {
-      color: var(--primary-color);
+      color: var(--accent-color);
       width: 24px;
       height: 24px;
       stroke-width: 2px;
+      transition: color var(--transition-speed);
     }
 
     .step-title {
       font-size: 1.1rem;
       font-weight: 600;
-      color: var(--text-dark);
+      color: var(--text-light);
       margin: 0 0 0.5rem 0;
     }
 
@@ -370,6 +368,11 @@ p {
       color: var(--text-muted);
       line-height: 1.4;
       margin: 0;
+    }
+
+    /* Desktop UI structure completely hides mobile dynamic elements */
+    .content-panel {
+      display: none;
     }
 
 /* --- Footer Layout & Typography --- */
@@ -472,46 +475,86 @@ p {
     }
 }
 
-.flywheel-container {
-        width: 100%;
-        height: auto;
+.flywheel-wrapper {
         flex-direction: column;
-        gap: 2.5rem; /* Space between stacked cards to allow room for mobile vertical arrows */
-        padding: 1rem 0;
+        width: 100%;
+        max-width: 360px;
+        height: auto;
       }
 
-      /* Hide the desktop curved SVG entirely */
+      /* Desktop paths system swap out code block */
       .flywheel-svg {
+        width: 320px;
+        height: 320px;
+        position: relative;
+        top: auto; left: auto;
+      }
+      
+      /* Reconfigure desktop arrows for smaller radius wheel geometry tracking paths */
+      .arrow-path {
+        stroke-width: 2.5;
+        stroke-dasharray: 5 4;
+      }
+      /* Adjust SVG arc commands for mobile coordinates */
+      .path-1 { d: path("M 215 43 Q 277 43 277 105"); }
+      .path-2 { d: path("M 277 215 Q 277 277 215 277"); }
+      .path-3 { d: path("M 105 277 Q 43 277 43 215"); }
+      .path-4 { d: path("M 43 105 Q 43 43 105 43"); }
+
+      /* Convert big cards into small compact circle elements */
+      .step-card {
+        width: 56px;
+        height: 56px;
+        border-radius: 50%;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 4px 12px rgba(26, 53, 80, 0.2);
+        -webkit-tap-highlight-color: transparent;
+      }
+
+      /* Completely hide header tags, layout copy and descriptions inside the circle nodes */
+      .step-number, .step-title, .step-description {
         display: none;
       }
 
-      /* Strip away absolute positioning so cards stack naturally */
-      .step-card {
-        position: relative;
+      /* Reposition circles into smaller mobile radius bounds */
+      .step-1 { top: 15px; left: 50%; transform: translateX(-50%) !important; }
+      .step-2 { top: 147px; right: 15px; left: auto; transform: none !important; }
+      .step-3 { bottom: 15px; top: auto; left: 50%; transform: translateX(-50%) !important; }
+      .step-4 { top: 147px; left: 15px; transform: none !important; }
+
+      /* Apply correct click animations when item elements are toggled active */
+      .step-card.active {
+        background: var(--accent-color);
+        box-shadow: 0 0 15px rgba(56, 189, 248, 0.5);
+      }
+
+      .step-1.active { transform: translate(-50%, 5px) scale(1.1) !important; }
+      .step-2.active { transform: translateX(-5px) scale(1.1) !important; }
+      .step-3.active { transform: translate(-50%, -5px) scale(1.1) !important; }
+      .step-4.active { transform: translateX(5px) scale(1.1) !important; }
+
+      .step-card.active .step-icon {
+        color: var(--bg-card);
+      }
+
+      /* Unhide narrative display panel at the bottom */
+      .content-panel {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
         width: 100%;
-        max-width: 400px; /* Prevents cards from getting awkwardly wide on tablets */
-        top: auto !important;
-        left: auto !important;
-        right: auto !important;
-        bottom: auto !important;
-        transform: none !important;
-      }
-
-      /* Consistent hover animation for mobile instead of directional shifts */
-      .step-card:hover {
-        transform: translateY(-3px) !important;
-      }
-
-      /* Generate a vertical connecting line between cards using CSS pseudo-elements */
-      .step-card:not(:last-child)::after {
-        content: '';
-        position: absolute;
-        bottom: -2.5rem; /* Matches the container gap size */
-        left: 50%;
-        transform: translateX(-50%);
-        width: 0;
-        height: 2.5rem;
-        border-left: 3px dashed #cbd5e1;
+        background: var(--bg-card);
+        padding: 1.25rem;
+        border-radius: 16px;
+        box-sizing: border-box;
+        text-align: center;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+        min-height: 125px;
+        margin-top: -120px; /* Pulls panel up directly beneath the mobile canvas circle layout */
+        z-index: 3;
       }
 
 /* --- Legal/Copyright Text --- */
