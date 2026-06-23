@@ -8,6 +8,9 @@
     --secondary-color: #3E92CC;
     --text-color: #FFFFFF;
     --text-muted: #A5C4D4;
+   --bg-card: #1a3550;         /* Added missing token */
+    --accent-color: #3E92CC;     /* Added missing token */
+    --transition-speed: 0.3s;    /* Added missing token */
 }
 
 * {
@@ -280,6 +283,16 @@ p {
 }
 
 /* Outer wrapper for layout shifting */
+.flywheel-scaler {
+    width: 100%;
+    max-width: 700px;
+    margin: 40px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: visible;
+}
+
     .flywheel-wrapper {
       position: relative;
       width: 700px;
