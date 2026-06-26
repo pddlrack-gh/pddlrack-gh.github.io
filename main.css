@@ -23,6 +23,11 @@ body {
     line-height: 1.6;
 }
 
+.contact-link {
+    color: #3E92CC; /* Changes the base color */
+    /*text-decoration: none;  Optional: removes the underline */
+}
+
 /* ==========================================================================
    2. Responsive Hero Image Banner
    ========================================================================== */
