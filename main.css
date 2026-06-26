@@ -532,6 +532,25 @@ p {
 
 /* Responsive adjustment for small mobile views so content stacks cleanly if text is long */
 @media (max-width: 480px) {
+
+   .nav-tabs {
+        display: flex;
+        flex-wrap: nowrap; /* Prevents wrapping */
+        overflow-x: auto;  /* Enables horizontal scrolling */
+        -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+        justify-content: flex-start; /* Aligns items to the left to allow scrolling */
+        padding-bottom: 5px; /* Tiny buffer for scrollbar clearance */
+    }
+
+    .nav-item {
+        flex: 0 0 auto; /* Prevents tabs from shrinking */
+        margin: 0 10px;
+    }
+    
+    /* Optional: Hides the ugly default scrollbar while keeping the swipe functionality */
+    .nav-tabs::-webkit-scrollbar {
+        display: none;
+    }
    
     .info-badge {
         border-radius: 16px; /* Boxier rounded edges look cleaner when stacked on mobile */
