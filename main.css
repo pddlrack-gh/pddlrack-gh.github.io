@@ -23,9 +23,8 @@ body {
     line-height: 1.6;
 }
 
-.contact-link {
-    color: #3E92CC; /* Changes the base color */
-    /*text-decoration: none;  Optional: removes the underline */
+a[href^="mailto:"] {
+    color: #3E92CC;
 }
 
 /* ==========================================================================
@@ -66,7 +65,7 @@ body {
     list-style: none;
     max-width: 1200px;
     margin: 0 auto;
-    gap: 20px;
+    gap: 5px;
     width: 100%; /* add this */
 }
 
